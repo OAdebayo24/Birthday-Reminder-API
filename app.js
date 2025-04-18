@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const path = require("path")
 const UserRoute = require("./route/user.route")
 // const cors = require("cors")
 require("dotenv").config()
@@ -14,11 +15,9 @@ app.use(express.json())
 // app.use(cors())
 
 
-app.use("/api/user", UserRoute)
+app.use("/api/users", UserRoute)
 
-app.get("/", (req, res) => {
-  res.status(200).json({message:"Birthday Reminder API with Cron"})
-})
+app.use("/", express.static(path.join(__dirname, "public")))
 
 app.listen(PORT, () => {
   console.log(`Server started at http://localhost:${PORT}`)
