@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log("Success:", data.success)
+          // console.log("Success:", data.success)
           if(data.success === true) {
             alert("User created Successfully");
           }
