@@ -5,6 +5,7 @@ const createUser = async (req, res) => {
 
   try {
     const { name, email, DateOfBirth } = req.body;
+    console.log(req)
 
     if (!name || !email || !DateOfBirth) {
       return res

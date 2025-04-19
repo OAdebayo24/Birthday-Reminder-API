@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <h2>Register Birthday</h2>
-    <form id="birthdayForm">
+    <form id="birthdayForm" enctype="multipart/form-data">
       <label for="username">Username</label>
       <input type="text" id="username" name="name" required />
   
@@ -19,7 +19,7 @@
       <label for="dob">Date of Birth</label>
       <input type="date" id="dob" name="DateOfBirth" required />
   
-      <button type="submit">Submit</button>
+      <button type="submit" id="submitForm">Submit</button>
       <div class="message" id="message"></div>
     </form>
   </div>
